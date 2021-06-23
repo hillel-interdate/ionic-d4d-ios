@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {NavController, NavParams, ToastController, LoadingController, Events} from 'ionic-angular';
 import {RegistrationOnePage} from '../registration-one/registration-one';
 import {PasswordRecoveryPage} from '../password-recovery/password-recovery';
@@ -17,7 +17,9 @@ import {Http, Headers, RequestOptions} from '@angular/http';
 })
 export class LoginPage {
 
-    form: { errors: any, login: any } = {errors: {}, login: {username: {label: {}}, password: {label: {}}}};
+  @ViewChild('content') private content: any;
+
+  form: { errors: any, login: any } = {errors: {}, login: {username: {label: {}}, password: {label: {}}}};
     errors: any;
     header: RequestOptions;
     user: any = {id: '', name: ''};
@@ -133,6 +135,10 @@ export class LoginPage {
                 this.api.sendPhoneId(deviceToken);
             });
         }
+    }
+    scrollDown(){
+      console.log(this.content.scrollToBottom)
+      setTimeout(() => { this.content.scrollToBottom(300); }, 300);
     }
 
     ionViewDidLoad() {

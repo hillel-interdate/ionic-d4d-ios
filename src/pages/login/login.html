@@ -12,33 +12,37 @@
   <!--<ion-title><button></button><ion-icon name="arrow-round-back"></ion-icon></button></ion-title>-->
 </ion-header>
 
-<ion-content class="bg-image" padding>
+<ion-content class="bg-image" padding #content>
 
   <div class="space_login"></div>
 
-<div class="login-form">
+  <div class="login-form">
 
-  <ion-list>
-    <ion-item>
-      <ion-input [(ngModel)]="user.name" type="text" placeholder="Username"></ion-input>
-    </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-input [(ngModel)]="user.name" type="text" placeholder="Username" (ionFocus)=scrollDown()
+                   (ionBlur)=scrollDown()></ion-input>
+      </ion-item>
 
-    <ion-item >
-      <ion-input [(ngModel)]="form.login.password.value" type="password" placeholder="Password"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="form.login.password.value" type="password" placeholder="Password"
+                   (ionFocus)=scrollDown() (ionBlur)=scrollDown()></ion-input>
+      </ion-item>
 
-    <div color="danger" class="err">{{ errors }}</div>
+      <div color="danger" class="err">{{ errors }}</div>
 
-  </ion-list>
+    </ion-list>
 
-  <div class="login-btn">
-    <button color="orange" tappable class="btn-orange" (click)=formSubmit() ion-button block>Login</button>
+    <div class="login-btn">
+      <button color="orange" tappable class="btn-orange" (click)=formSubmit() ion-button block>Login</button>
+    </div>
+    <div padding>
+      <button color="orange" class="btn btn-orange" tappable (click)=onRegistrationPage() ion-button>Join Free</button>
+      <button color="danger" class="btn grey" tappable (click)=onPasswordRecoveryPage() ion-button>Forgot Password
+      </button>
+    </div>
   </div>
-  <div padding>
-  <button color="orange" class="btn btn-orange" tappable (click)=onRegistrationPage() ion-button >Join Free</button>
-  <button color="danger" class="btn grey" tappable (click)=onPasswordRecoveryPage()  ion-button >Forgot Password</button>
-  </div>
-  </div>
+  <div class="bottom"></div>
 </ion-content>
 <ion-footer>
 </ion-footer>
