@@ -14,19 +14,15 @@
 
 <ion-content class="bg-image" padding #content>
 
-  <div class="space_login"></div>
-
   <div class="login-form">
 
     <ion-list>
       <ion-item>
-        <ion-input [(ngModel)]="user.name" type="text" placeholder="Username" (ionFocus)=scrollDown()
-                   (ionBlur)=scrollDown()></ion-input>
+        <ion-input [(ngModel)]="user.name" type="text" placeholder="Username"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input [(ngModel)]="form.login.password.value" type="password" placeholder="Password"
-                   (ionFocus)=scrollDown() (ionBlur)=scrollDown()></ion-input>
+        <ion-input [(ngModel)]="form.login.password.value" type="password" placeholder="Password"></ion-input>
       </ion-item>
 
       <div color="danger" class="err">{{ errors }}</div>
@@ -42,7 +38,6 @@
       </button>
     </div>
   </div>
-  <div class="bottom"></div>
 </ion-content>
 <ion-footer>
 </ion-footer>

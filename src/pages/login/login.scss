@@ -49,16 +49,12 @@ page-login {
     background-color: rgba(0,0,0,0.5);
     padding-top: 15px;
     width: 100%;
+    bottom: 0;
   }
 
-  .space_login{
-    width: 100%;
-    height: calc(100vh - 312px);
-  }
+
   .link-banner{ display: none; }
-  .bottom{
-    transition: height 0.2s ease-in-out;
-  }
+
   .expanded{
     margin-bottom: 330px;
   }
