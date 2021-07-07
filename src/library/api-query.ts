@@ -116,7 +116,7 @@ export class ApiQuery {
 
   sendPhoneId(idPhone) {
     let data = JSON.stringify({deviceId: idPhone});
-    const os = this.plt.is('android') ? 'android' : 'ios';
+    const os = this.plt.is('android') ? 'Android' : 'IOS';
     this.http.post(this.url + '/user/deviceId/OS:' + os, data, this.setHeaders(true)).subscribe(data => {
       //alert(JSON.stringify(data));
       console.log('sendPhoneId: ', data.json());
