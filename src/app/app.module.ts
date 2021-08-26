@@ -40,6 +40,7 @@ import {File} from "@ionic-native/file";
 import {Geolocation} from "@ionic-native/geolocation";
 import {BrowserModule} from "@angular/platform-browser";
 import {Push} from "@ionic-native/push";
+import {InAppPurchase} from "@ionic-native/in-app-purchase";
 import {Deeplinks} from "@ionic-native/deeplinks";
 
 
@@ -117,6 +118,7 @@ import {Deeplinks} from "@ionic-native/deeplinks";
         Keyboard,
         StatusBar,
         SplashScreen,
+        InAppPurchase,
         Device,
         ImagePicker,
         FileTransfer,

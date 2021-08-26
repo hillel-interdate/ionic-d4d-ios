@@ -6,14 +6,14 @@
                 <ion-icon id="menu"></ion-icon>
             </button>
         </div>
-        <div class="socials right">
-            <div tappable class="social" (click)="goTo('https://www.facebook.com/dating4d/')">
-                <img src="https://m.dating4disabled.com/images/facebook.png">
-            </div>
-            <div tappable class="social" (click)="goTo('https://twitter.com/Dating4D')">
-                <img src="https://m.dating4disabled.com/images/twitter.png">
-            </div>
-        </div>
+<!--        <div class="socials right">-->
+<!--            <div tappable class="social" (click)="goTo('https://www.facebook.com/dating4d/')">-->
+<!--                <img src="https://m.dating4disabled.com/images/facebook.png">-->
+<!--            </div>-->
+<!--            <div tappable class="social" (click)="goTo('https://twitter.com/Dating4D')">-->
+<!--                <img src="https://m.dating4disabled.com/images/twitter.png">-->
+<!--            </div>-->
+<!--        </div>-->
 
         <button (click)="homePage()" class="logo"><img src="assets/img/icons/logo.png" alt="sugardaddy"></button>
     </ion-navbar>
@@ -38,21 +38,27 @@
                 </button>
             </div>
             <div class="socials-list">
-                <div tappable class="twitter" (click)="goTo('https://twitter.com/Dating4D')">
-                    <img src="https://m.dating4disabled.com/images/twitter.png">
-                </div>
-                <div tappable class="facebook" (click)="goTo('https://www.facebook.com/dating4d/')">
+<!--                <div tappable class="twitter" (click)="goTo('https://twitter.com/Dating4D')">-->
+<!--                    <img src="https://m.dating4disabled.com/images/twitter.png">-->
+<!--                </div>-->
+                <div class="facebook">
+                  <a target="_blank" href="https://www.facebook.com/dating4d/">
                     <img src="https://m.dating4disabled.com/images/facebook.png">
+                  </a>
                 </div>
-                <div tappable class="instagram" (click)="goTo('https://www.instagram.com/dating4disabled/')">
+                <div class="instagram">
+                  <a target="_blank" href="https://www.instagram.com/dating4disabled/">
                     <img src="https://m.dating4disabled.com/images/instagram.png">
+                  </a>
                 </div>
-                <div tappable class="pinterest" (click)="goTo('https://www.pinterest.com/dating4disabled/')">
+                <div class="pinterest">
+                  <a target="_blank" href="https://www.pinterest.com/dating4disabled/">
                     <img src="https://m.dating4disabled.com/images/pinterest.png">
+                  </a>
                 </div>
-                <div tappable class="telegram" (click)="goTo('https://t.me/dating4disabled','_system')">
-                    <img src="https://m.dating4disabled.com/images/telegram.png">
-                </div>
+<!--                <div tappable class="telegram" (click)="goTo('https://t.me/dating4disabled','_system')">-->
+<!--                    <img src="https://m.dating4disabled.com/images/telegram.png">-->
+<!--                </div>-->
             </div>
         </ion-list>
     </ion-content>

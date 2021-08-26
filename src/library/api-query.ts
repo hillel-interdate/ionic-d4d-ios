@@ -41,7 +41,7 @@ export class ApiQuery {
               private sanitizer: DomSanitizer,
               private plt: Platform,) {
 
-    // this.url = 'http://localhost:8100';
+    //this.url = 'http://localhost:8100';
     this.url = 'https://m.dating4disabled.com/api/v7';
     this.storage.get('user_id').then((val) => {
       this.storage.get('username').then((username) => {

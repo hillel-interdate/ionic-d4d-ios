@@ -477,13 +477,13 @@ export class MyApp {
 
         if (page._id == 'logout') {
             this.status = '';
-        } else if (page._id == 'subscription') {
+        } /*else if (page._id == 'subscription') {
             this.api.storage.get('user_id').then((user_id) => {
                 if(user_id) {
                     window.open('https://m.dating4disabled.com/subscription/?app_user_id=' + user_id, '_blank');
                 }
             });
-        }
+        }*/
 
         if (page._id == 'stats') {
             this.menu3Active();
@@ -512,9 +512,9 @@ export class MyApp {
                     list: page.list
                 });
             }
-            if (page._id != 'subscription') {
+            //if (page._id != 'subscription') {
                 this.nav.push(page.component, {page: page, action: 'list', params: params});
-            }
+            //}
         }
     }
 
@@ -674,8 +674,8 @@ export class MyApp {
         });
     }
 
-    goTo(link, target = '_blank') {
-        window.open(link, target);
+    goTo(link, target = '_self') {
+        window.open(link);
         return false;
     }
 

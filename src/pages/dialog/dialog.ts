@@ -100,10 +100,11 @@ export class DialogPage {
     }
 
     subscription() {
-        this.api.storage.get('user_id').then((user_id) => {
-            window.open('https://m.dating4disabled.com/subscription/?app_user_id=' + user_id, '_blank');
-            //this.navCtrl.push(SubscriptionPage);
-        });
+        // this.api.storage.get('user_id').then((user_id) => {git
+        //     window.open('https://m.dating4disabled.com/subscription/?app_user_id=' + user_id, '_blank');
+        //
+        // });
+      this.navCtrl.push(SubscriptionPage);
 
     }
 
